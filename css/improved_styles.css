@@ -1,0 +1,83 @@
+/* improved_styles.css */
+
+/* Enhance navigation menu */
+.menu-container {
+    background-color: #1a4fcb;
+    padding: 15px 0;
+  }
+  
+  .menu-container a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: relative;
+  }
+  
+  .menu-container a:hover {
+    color: #ffcc00;
+  }
+  
+  /* Improve button styles */
+  .btn-primary {
+    background-color: #1a4fcb;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0f3c91;
+  }
+  
+  /* Refine content section */
+  .content {
+    padding: 30px;
+    margin: 20px 10%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Improve banner styles */
+  .banner {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .banner-content {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+  }
+  
+  .banner a {
+    color: #ffcc00;
+    border: 2px solid #ffcc00;
+  }
+  
+  .banner a:hover {
+    background-color: #ffcc00;
+    color: #333;
+  }
+  
+  /* Responsive adjustments */
+  @media screen and (max-width: 768px) {
+    .banner {
+      height: 250px;
+    }
+  
+    .banner-content {
+      padding: 10px;
+    }
+  }
+  

@@ -1,0 +1,44 @@
+/* animations.css */
+
+/* Smooth fade-in for page content */
+.fade-in {
+    animation: fadeIn 1.5s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  /* Button hover animation */
+  .btn-hover {
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .btn-hover:hover {
+    background-color: #0f3c91;
+    transform: scale(1.05);
+  }
+  
+  /* Navigation link hover animation */
+  .nav-link-hover {
+    position: relative;
+  }
+  
+  .nav-link-hover::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #fff;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .nav-link-hover:hover::before {
+    visibility: visible;
+    width: 100%;
+  }
+  
