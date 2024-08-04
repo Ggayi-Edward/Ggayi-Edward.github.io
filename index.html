@@ -23,6 +23,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Add this in the head section -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+  
 
   <!-- Internal CSS -->
   <style>
@@ -338,6 +342,26 @@
         padding: 10px;
         border-top: 1px solid #003366;
     }
+  
+    @keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 40px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.fadeInUp {
+    animation-name: fadeInUp;
+}
 </style>
 </head>
 <body>
@@ -354,16 +378,27 @@
       <a href="#contact">Contact Us</a>
   </div>
 
-  <div class="content" id="home">
-      <h2><span>Home</span></h2>
-      <p>Welcome to your <span>ultimate destination in real estate innovation!</span></p>
-      <p>Discover a seamless experience where finding your dream home is just a <span>click away.</span></p>
-      <p>Explore our <span>curated listings,</span> from cozy apartments to luxurious estates, designed to match every lifestyle.</p>
-      <p>Whether you're buying, selling, or renting, our platform offers comprehensive tools and expert guidance.</p>
-      <p>Join thousands of satisfied clients who have found success with our <span>intuitive solutions.</span></p>
-      <p>Let's redefine real estate together. Start your journey with us today!</p>
-  </div>
-<div class="content" id="features">
+  <div class="content" id="home" data-aos="fade-up" data-aos-delay="100">
+    <h2><span>Home</span></h2>
+    <p>Welcome to your <span>ultimate destination in real estate innovation!</span></p>
+    <p>Discover a seamless experience where finding your dream home is just a <span>click away.</span></p>
+    <p>Explore our <span>curated listings,</span> from cozy apartments to luxurious estates, designed to match every lifestyle.</p>
+    <p>Whether you're buying, selling, or renting, our platform offers comprehensive tools and expert guidance.</p>
+    <p>Join thousands of satisfied clients who have found success with our <span>intuitive solutions.</span></p>
+    <p>Let's redefine real estate together. Start your journey with us today!</p>
+</div>
+
+<!-- Include AOS library -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+<script>
+  // Initialize AOS library
+  AOS.init({
+      duration: 10000, // Duration of animation in milliseconds
+      once: true // Whether animation should happen only once
+  });
+</script>
+<div class="content" id="features" data-aos="fade-right" data-aos-delay="200">
     <h2><span>Features</span></h2>
     <p>Digitalize agreements and records by enabling the creation and signing of legally binding lease agreements electronically.</p>
     <p>Integrate online mobile rent collection/payment and payment tracking.</p>
@@ -376,7 +411,19 @@
     </ul>
 </div>
 
-<div class="content" id="pricing">
+<div class="spacer"></div> <!-- Added to create scrolling space -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Initialize AOS library
+        AOS.init({
+            duration: 1000, // Duration of animation in milliseconds
+            mirror: true // Whether elements should animate out while scrolling past them
+        });
+    });
+</script>
+
+<div class="content" id="pricing" data-aos="fadeInUp" data-aos-delay="300">
     <h2><span>Pricing</span></h2>
     <p>Our pricing plans are designed for you:</p>
     <p><span>Flexible options</span> to fit your budget.</p>
@@ -391,9 +438,10 @@
     <p>Join us and see how our plans support your real estate goals.</p>
 </div>
 
+
 </body>
 </html>
-<div class="content" id="about">
+<div class="content" id="about" data-aos="fade-right" data-aos-delay="300">
   <h2>About Us</h2>
   <p>Meet the team behind our Real Estate App:</p>
   <div class="about-section">
@@ -436,7 +484,7 @@
 </div>
 
 
-<div class="content" id="contact">
+<div class="content" id="contact" data-aos="fade-up" data-aos-delay="300">
   <h2><span style="color: #003366;">Contact Us</span></h2>
   <p>Get in touch with us for any inquiries:</p>
   <p>Our dedicated team is here to assist you <span style="color: #009900; font-weight: bold;">24/7.</span></p>
@@ -591,6 +639,7 @@
 </head>
 <body>
 
+
 </body>
 </html>
 <title>Sign Up - Property Management App</title>
@@ -683,9 +732,9 @@
 </style>
 </head>
 <body>
-  <div class="container">
+  <div class="container"data-aos="fade-up" data-aos-delay="300">
     <h1>Join Us Here, Dear Tenant and Landlord</h1>
-    <div class="image-container">
+    <div class="image-container" data-aos="fade-up" data-aos-delay="300" >
         <div class="image">
             <img src="img/account_type.png" alt="Image 1">
         </div>
@@ -712,9 +761,9 @@
 </div>
 
 
-<div class="container">
+<div class="container"data-aos="fade-up" data-aos-delay="300">
   <h1>Welcome Back!</h1>
-  <div class="image">
+  <div class="image" data-aos="fade-up" data-aos-delay="300">
       <img src="img/login.png" alt="Welcome Image">
   </div>
   <style>
@@ -735,7 +784,7 @@
 </body>
 </html>
 
-    <div class="banner" style="background: url('https://i.pinimg.com/564x/1a/42/08/1a4208b7c13e84c3e07a5778a0103e1b.jpg') no-repeat center; background-size: cover; height: 500px;">
+    <div class="banner" style="background: url('https://i.pinimg.com/564x/1a/42/08/1a4208b7c13e84c3e07a5778a0103e1b.jpg') no-repeat center; background-size: cover; height: 500px;" data-aos="fade-up" data-aos-delay="300">
       <div class="banner-table flex-column" style="background-color: rgba(0, 0, 0, 0.5);">
         <div class="flex-row">
           <div class="flex-item flex-column">
@@ -752,7 +801,7 @@
       
       </div>
     </div>
-    <div class="banner" style="background: url('https://i.pinimg.com/564x/7a/a6/8e/7aa68edb92859785020dcb3117e0860c.jpg') no-repeat center; background-size: cover; height: 500px;">
+    <div class="banner" style="background: url('https://i.pinimg.com/564x/7a/a6/8e/7aa68edb92859785020dcb3117e0860c.jpg') no-repeat center; background-size: cover; height: 500px;"  data-aos="fade-up" data-aos-delay="300" >
       <div class="banner-table flex-column">
         <div class="flex-row">
           <div class="flex-item flex-column">
@@ -767,7 +816,7 @@
       <div class="content-table flex-column">
         <!-- Start Text with Images and Videos -->
         <div class="flex-row">
-          <div class="flex-item flex-column">
+          <div class="flex-item flex-column" data-aos="fade-up" data-aos-delay="300">
             <h2 id="text-with-images-and-videos" class="no-top-margin">Text with Images and Videos</h2>
             <hr>
             <p class="text">Discover our innovative approach to property management.</p>
@@ -775,7 +824,7 @@
         </div>
     
         <div class="flex-row">
-          <div class="flex-item flex-item-stretch flex-column">
+          <div class="flex-item flex-item-stretch flex-column" data-aos="fade-right" data-aos-delay="300">
             <img class="image" src="https://i.pinimg.com/564x/ce/89/6e/ce896eb536bc4740bddbee62a7c27e21.jpg" alt="Image 1">
           </div>
           <div class="flex-item flex-item-stretch flex-column">
@@ -793,7 +842,7 @@
           <div class="flex-item flex-item-stretch-2 flex-column">
             <p class="text">Explore our comprehensive reporting and analytics features.</p>
           </div>
-          <div class="flex-item flex-item-stretch flex-column">
+          <div class="flex-item flex-item-stretch flex-column"data-aos="fade-left" data-aos-delay="300">
             <img class="image" src="https://i.pinimg.com/564x/fe/7a/93/fe7a9358cb9fda74673b699a5b9d28c4.jpg" alt="Image 2">
           </div>
         </div>
@@ -803,7 +852,7 @@
             <p class="text">Have a look at one of our self-contained houses, luxury furniture!</p>
           </div>
           <div class="flex-item flex-item-stretch flex-column">
-            <div class="video-wrapper">
+            <div class="video-wrapper" data-aos="fade-up" data-aos-delay="300">
               <video controls>
                 <source src="img/homextour.mp4" type="video/mp4">
                 Your browser does not support the video tag.
@@ -1107,36 +1156,42 @@
           </div>
         </div>
         
-<div class="masonry add-top-margin-small add-bottom-margin-small">
-        <figure>
-            <img src="https://i.pinimg.com/564x/6c/e0/38/6ce038ec5a3d30039bdf0b9c345d9e7a.jpg" alt="Masonry Image 1">
-            <figcaption>Modern Urban Apartments</figcaption>
-        </figure>
-        <figure>
-            <img src="https://i.pinimg.com/564x/50/2a/14/502a1492ac0a5bedfc510e85662e662b.jpg" alt="Masonry Image 2">
-            <figcaption>Great House</figcaption>
-        </figure>
-        <figure>
-            <img src="https://i.pinimg.com/736x/9b/65/c1/9b65c16c30b45ce6395a3b11a69a284c.jpg" alt="Masonry Image 3">
-            <figcaption>House with the Swimming Pool</figcaption>
-        </figure>
-        <figure>
-            <img src="https://i.pinimg.com/564x/fb/91/c6/fb91c64cf6f5a56dbfe2734aef2af9c9.jpg" alt="Masonry Image 4">
-            <figcaption>Residential Complex</figcaption>
-        </figure>
-        <figure>
-            <img src="https://i.pinimg.com/564x/13/c6/a6/13c6a6aab1da2a0979113ba66429b678.jpg" alt="Masonry Image 5">
-            <figcaption>Community Facilities</figcaption>
-        </figure>
-        <figure>
-            <img src="https://i.pinimg.com/564x/ef/c1/42/efc1426b730813b14dcc22dcfec4efa4.jpg" alt="Masonry Image 6">
-            <figcaption>Outdoor Spaces</figcaption>
-        </figure>
-        <figure>
-            <img src="https://i.pinimg.com/564x/9a/20/fa/9a20fa2478aaa6e7e37c9f68bae8297b.jpg" alt="Masonry Image 7">
-            <figcaption>Interior Designs</figcaption>
-        </figure>
-    </div>
+        <div class="masonry add-top-margin-small add-bottom-margin-small">
+          <figure data-aos="fade-up">
+              <img src="https://i.pinimg.com/564x/6c/e0/38/6ce038ec5a3d30039bdf0b9c345d9e7a.jpg" alt="Masonry Image 1">
+              <figcaption>Modern Urban Apartments</figcaption>
+          </figure>
+          <figure data-aos="fade-up" data-aos-delay="100">
+              <img src="https://i.pinimg.com/564x/50/2a/14/502a1492ac0a5bedfc510e85662e662b.jpg" alt="Masonry Image 2">
+              <figcaption>Great House</figcaption>
+          </figure>
+          <figure data-aos="fade-up" data-aos-delay="200">
+              <img src="https://i.pinimg.com/736x/9b/65/c1/9b65c16c30b45ce6395a3b11a69a284c.jpg" alt="Masonry Image 3">
+              <figcaption>House with the Swimming Pool</figcaption>
+          </figure>
+          <figure data-aos="fade-up" data-aos-delay="300">
+              <img src="https://i.pinimg.com/564x/fb/91/c6/fb91c64cf6f5a56dbfe2734aef2af9c9.jpg" alt="Masonry Image 4">
+              <figcaption>Residential Complex</figcaption>
+          </figure>
+          <figure data-aos="fade-up" data-aos-delay="400">
+              <img src="https://i.pinimg.com/564x/13/c6/a6/13c6a6aab1da2a0979113ba66429b678.jpg" alt="Masonry Image 5">
+              <figcaption>Community Facilities</figcaption>
+          </figure>
+          <figure data-aos="fade-up" data-aos-delay="500">
+              <img src="https://i.pinimg.com/564x/ef/c1/42/efc1426b730813b14dcc22dcfec4efa4.jpg" alt="Masonry Image 6">
+              <figcaption>Outdoor Spaces</figcaption>
+          </figure>
+          <figure data-aos="fade-up" data-aos-delay="600">
+              <img src="https://i.pinimg.com/564x/9a/20/fa/9a20fa2478aaa6e7e37c9f68bae8297b.jpg" alt="Masonry Image 7">
+              <figcaption>Interior Designs</figcaption>
+          </figure>
+      </div>
+   
+     
+      <script>
+          // Initialize AOS library
+          AOS.init();
+      </script>
         <!-- End Masonry -->
         <!-------------------------------------------------------------------------------------------->
         <!--Start Credits-->
@@ -1151,7 +1206,7 @@
         <!-------------------------------------------------------------------------------------------->
       </div>
     </div>
-    <div class="footer-container">
+    <div class="footer-container" data-aos="fade-up" data-aos-delay="400" >
       <div class="footer-content">
         <div class="footer-section">
           <h3>About Us</h3>
@@ -1179,6 +1234,7 @@
     </div>
     
   </div>
+
 </body>
 
 </html>
